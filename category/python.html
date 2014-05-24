@@ -1,53 +1,174 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-        <meta charset="utf-8" />
-        <title>DTS World - Python</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <meta charset="utf-8">
+    <title>DTS Log</title>
+    <meta name="description" content="">
+    <meta name="author" content="dingyj">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="/theme/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="/theme/local.css" rel="stylesheet">
+    <link href="/theme/pygments.css" rel="stylesheet">
+
 </head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">DTS World </a></h1>
-                <nav><ul>
-                    <li class="active"><a href="/category/python.html">Python</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+<body>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/how-to-work-pelicangithub-in-windows.html">How to work Pelican&GitHub in windows</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2014-05-24T12:20:00">
-                周六 24 五月 2014
-        </abbr>
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
 
-        <address class="vcard author">
-                By <a class="url fn" href="/author/cheney.html">cheney</a>
-        </address>
-<p>In <a href="/category/python.html">Python</a>. </p>
-<p>tags: <a href="/tag/pelican.html">pelican</a><a href="/tag/publishing.html">publishing</a></p>
-</footer><!-- /.post-info --><p>This is the content of my super blog post.</p>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
-            </ol><!-- /#posts-list -->
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+        <a class="brand" href="">DTS Log</a>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+        <div class="nav-collapse">
+        <ul class="nav">
+            
+        </ul>
+        </div>
+        
+    </div>
+    </div>
+</div>
 
+<div class="container">
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+        
+
+        
+
+
+    <div class='article'>
+        <div class="content-title">
+            <a href="/how-to-work-pelicangithub-in-windows.html"><h1>How to work Pelican&GitHub in windows</h1></a>
+周六 24 五月 2014
+
+by <a class="url fn" href="/author/dingyj.html">dingyj</a>
+ 
+
+
+ 
+        </div>
+        
+        <div><h1>Windows下，基于Pelican&amp;GitHub搭建个人博客</h1>
+<h2>一、如何构建</h2>
+<p>以Pelican和Github为关键字，百度/谷歌，会有很多文章可供参考，内容大同小异。
+这里贴几个链接：</p>
+<ol>
+<li><a href="http://yangsan.github.io/articles/blog/build_your_blog.html">利用Pelican和Github简单迅速地搭建自己的博客</a></li>
+<li><a href="http://frantic1048.com/bo-ke-dan-sheng-ji-ji-yu-githubpelicanchuang-jian-bo-ke-de-zheng-ge-guo-cheng.html">博客诞生记:基于GitHub+Pelican创建博客的整个过程</a></li>
+<li><a href="http://www.yanyulin.info/pages/2013/11/pelican.html">pelican搭建属于自已的博客</a></li>
+</ol>
+<h2>二、Windows下碰到的问题</h2>
+<ol>
+<li>
+<p>Python相关：<br />
+教程里涉及到诸多命令。这些命令需要将相关路径都放到系统变量里，才可以直接运行。
+比如，在cmd控制台中，直接输入pelican-quickstart，如果提示不能识别，这个时候就要检查pelican的安装路径是不是在系统变量Path下，如果没有，赶紧加上。  </p>
+<p>Tips：修改完系统变量，需要重启cmd控制台。</p>
+</li>
+<li>
+<p>启动本地调试<br />
+生成好内容之后，进入output目录，利用Python自带的SimpleHTTPServer运行  </p>
+<blockquote>
+<p>cd output<br />
+python -m SimpleHTTPServer   # 注意大小写  `</p>
+</blockquote>
+</li>
+</ol>
+<p>官方文档在这里：<a href="https://github.com/getpelican/pelican/blob/master/docs/quickstart.rst">戳这里</a></p>
+<h2>三、Pelican的使用</h2>
+<ol>
+<li>设置静态页面，<a href="http://lanbing.org/post/Pelican-Static.html">戳这里</a>  </li>
+</ol>
+<h4></h4>
+<p>本人也在学习中，欢迎交流`:)<br />
+2014/5/24 17:12:17 </p></div>
+        <hr />
+    </div>
+		
+<div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+
+    <li class="active"><a href="/category/python.html">1</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
+</ul>
+</div>
+ 
+  
+        </div>
+        
+        <div class="span3">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Site
+                </li>
+            
+                <li><a href="/">Archives</a>
+                <li><a href="/tags.html">Tags</a>
+                <li><a href="/" rel="alternate">Atom feed</a></li>
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Categories
+                </li>
+                
+                <li><a href="/category/about.html">about</a></li>
+                <li><a href="/category/python.html">Python</a></li>
+                   
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Links
+                </li>
+            
+                <li><a href="http://getpelican.com/">Pelican</a></li>
+                <li><a href="http://python.org/">Python.org</a></li>
+                <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+            </ul>
+            </div>
+
+
+
+        </div>  
+    </div>     </div> 
+<footer>
+<br />
+<p><a href="">DTS Log</a> &copy; dingyj 2014</p>
+</footer>
+
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+ 
 </body>
 </html>
